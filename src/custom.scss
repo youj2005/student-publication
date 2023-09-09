@@ -1,0 +1,62 @@
+$body-bg: #f3f1ed;
+$font-family: Roboto;
+$font-family-serif: Arial;
+$border-color: black;
+$font-size-base: 1rem;
+$h6-font-size: $font-size-base*0.8;
+$h5-font-size: $font-size-base;
+
+//$font-family-serif: ;
+
+//node_modules/bootstrap/scss/_variables.scss
+//https://create-react-app.dev/docs/adding-bootstrap/#:~:text=To%20enable%20scss%20in%20Create,will%20need%20to%20install%20sass%20.&text=To%20customize%20Bootstrap%2C%20create%20a,the%20imported%20file(s).
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+.btn-primary{
+    background-color: #f3f1ed;
+    color: black;
+}
+
+.btn:hover, .btn:active {
+    color:#f3f1ed !important;
+    background-color:black !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.h4 {
+    margin-bottom: 0;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+  
+      .border#{$infix}-top {      border-top: $border-width solid $border-color !important; }
+      .border#{$infix}-end {    border-right: $border-width solid $border-color !important; }
+      .border#{$infix}-bottom {   border-bottom: $border-width solid $border-color !important; }
+      .border#{$infix}-start {     border-left: $border-width solid $border-color !important; }
+  
+      .border#{$infix}-top-0 {    border-top: 0 !important; }
+      .border#{$infix}-end-0 {  border-right: 0 !important; }
+      .border#{$infix}-bottom-0 { border-bottom: 0 !important; }
+      .border#{$infix}-start-0 {   border-left: 0 !important; }
+  
+      .border#{$infix}-x {
+        border-left: $border-width solid $border-color !important;
+        border-right: $border-width solid $border-color !important;
+      }
+  
+      .border#{$infix}-y {
+        border-top: $border-width solid $border-color !important;
+        border-bottom: $border-width solid $border-color !important;
+      }
+    }
+  }
+
+  .navbar-light {
+    background-color: #f3f1ed;
+  }
